@@ -1,0 +1,25 @@
+#include <ESP32Servo.h>
+
+#define SERVO_PIN 14
+
+Servo myServo;
+
+
+void setup() {
+    myServo.attach(SERVO_PIN);
+    myServo.write(0);
+    
+}
+
+void loop() {
+
+    for (int i = 0; i < 181; i++) {
+      myServo.write(i);
+      
+    }
+    delay(10);
+    for (int i = 180; i >= 00; i-- ) {
+      myServo.write(i);
+    }
+    
+}
